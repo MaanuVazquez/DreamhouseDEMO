@@ -1,0 +1,20 @@
+<ion-navbar primary *navbar>
+    <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Photo Search</ion-title>
+</ion-navbar>
+
+<ion-content>
+
+    <label style="text-align: center; font-size: 40px; margin-left: auto; margin-right: auto; display: block; margin-top: 60px;" (change)="photoSelected($event)">
+        <ion-icon name="camera"></ion-icon>
+        Select a photo...
+        <input id="file" type="file" accept="image/*" style="display: none;">
+    </label>
+
+    <div style="text-align: center; margin-left: auto; margin-right: auto; display: block;" *ngIf="searching">
+        <ion-spinner></ion-spinner>
+    </div>
+
+</ion-content>
