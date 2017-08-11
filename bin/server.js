@@ -30,8 +30,8 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 const app = (0, _express2.default)();
 
-app.use(_express2.default.static('../www'));
-app.use(_express2.default.static(_path2.default.join('../www', 'build')));
+app.use(_express2.default.static(_path2.default.join(__dirname, '../www')));
+app.use(_express2.default.static(_path2.default.join(__dirname, '../www', 'build')));
 app.use((0, _expressFileupload2.default)());
 app.use(_bodyParser2.default.json());
 
